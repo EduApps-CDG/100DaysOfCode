@@ -1,0 +1,29 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "a app that appnizes apps",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eduapps-cdg/app.git"
+  },
+  "keywords": [
+    "app"
+  ],
+  "author": "eduapps-cdg",
+  "license": "LGPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/eduapps-cdg/app/issues"
+  },
+  "homepage": "https://github.com/eduapps-cdg/app#readme",
+  "dependencies": {
+    "phaser": "^3.21.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10"
+  }
+}
