@@ -4,12 +4,10 @@
   "description": "a app that appnizes apps",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --config webpack.config.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/eduapps-cdg/app.git"
-  },
+  "repository": "git+https://github.com/eduapps-cdg/app.git",
   "keywords": [
     "app"
   ],
@@ -19,11 +17,19 @@
     "url": "https://github.com/eduapps-cdg/app/issues"
   },
   "homepage": "https://github.com/eduapps-cdg/app#readme",
+  "devDependencies": {
+    "@babel/core": "^7.7.7",
+    "@babel/plugin-proposal-class-properties": "^7.7.4",
+    "@babel/preset-env": "^7.7.7",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-preset-env": "^1.7.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.10.1"
+  },
   "dependencies": {
     "phaser": "^3.21.0"
-  },
-  "devDependencies": {
-    "webpack": "^4.41.4",
-    "webpack-cli": "^3.3.10"
   }
 }
