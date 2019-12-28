@@ -9,7 +9,7 @@ module.exports = {
   },
 
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, 'docs'),
     filename: 'game.bundle.js'
   },
 
@@ -29,14 +29,17 @@ module.exports = {
   },
 
   devServer: {
-    contentBase: path.resolve(__dirname, 'build'),
+    contentBase: path.resolve(__dirname, 'docs'),
+    compress: false,
+    disableHostCheck: true,
+    public: 'eduapps.net:8080'
   },
 
   plugins: [
     new CopyWebpackPlugin([
-      {from: path.resolve(__dirname, 'html/index.html'),to: path.resolve(__dirname, 'build')},
-      {from: path.resolve(__dirname,"css/*"),to: path.resolve(__dirname,'build')},
-      {from: path.resolve(__dirname,"assets","**",'*'),to: path.resolve(__dirname,'build')}
+      {from: path.resolve(__dirname, 'html/index.html'),to: path.resolve(__dirname, 'docs')},
+      {from: path.resolve(__dirname,"css/*"),to: path.resolve(__dirname,'docs')},
+      {from: path.resolve(__dirname,"assets","**",'*'),to: path.resolve(__dirname,'docs')}
     ]),
 
     new webpack.DefinePlugin({
@@ -67,7 +70,8 @@ module.exports = {
 	  name: "phaser",
 	  chunks: "all",
           filename: 'dependencies.bundle.js'
-        }                                                                                      }
+        }  
+      }
     }
   },
 }

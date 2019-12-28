@@ -57,7 +57,7 @@ export class LoadingScene extends Phaser.Scene {
     logo.displayWidth = 50;
     logo.displayHeight = 50;
     
-    this.time.addEvent({delay:3000, callback: function() {
+    this.time.addEvent({delay:1000, callback: function() {
     	Global.game.scene.start("main-menu");
     }, loop:false});
   }
